@@ -1,17 +1,13 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
+  extends: 'google',
+  quotes: [2, 'single'],
+  globals: {
+    SwaggerEditor: false
   },
-  extends: [
-    'airbnb-base',
-  ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+  env: {
+    browser: true
   },
   rules: {
-    'no-console': 'off',
-    'import/extensions': 'off',
-  },
+    "linebreak-style": 0
+  }
 };
