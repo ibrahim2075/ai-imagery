@@ -29,8 +29,8 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await //fetch('https://dalle-arbb.onrender.com/api/v1/dalle', {
-                                fetch('http://localhost:8080/api/v1/dalle', {
+        const response = await fetch('https://imagery-3ur1.onrender.com/api/v1/dalle', {
+          // fetch('http://localhost:8080/api/v1/dalle', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -59,8 +59,8 @@ const CreatePost = () => {
     if (form.prompt && form.photo) {
       setLoading(true);
       try {
-        const response = await //fetch('https://dalle-arbb.onrender.com/api/v1/post', {
-                            fetch('http://localhost:8080/api/v1/post', {
+        const response = await fetch('https://imagery-3ur1.onrender.com/api/v1/post', {
+          // fetch('http://localhost:8080/api/v1/post', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ const CreatePost = () => {
           />
 
           <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
-            { form.photo ? (
+            {form.photo ? (
               <img
                 src={form.photo}
                 alt={form.prompt}
